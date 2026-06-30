@@ -1,6 +1,6 @@
 
 TAIV ACCOUNT TRACKER - C++ DESKTOP APPLICATION
-Created for Andrii Pavlenko
+
 
 PROJECT PURPOSE
 This is a C++ desktop app project that demonstrates account coordination, CRM hygiene,
@@ -72,15 +72,3 @@ build_mingw.bat
 
 5. Then run create_desktop_shortcut.ps1.
 
-HOW TO PRESENT THIS TO TAIV
-You can say:
-
-"I built a small C++ desktop Account Tracker as a practical demo for Taiv.
-It tracks venues, contacts, campaign status, revenue opportunity, follow-up dates,
-priority, and account notes. The goal is to show how I think about account coordination,
-CRM hygiene, follow-up discipline, and reducing missed client actions."
-
-GOOD INTERVIEW LINE
-"This is not meant to replace Taiv's real CRM. I built it to demonstrate how I think:
-clean account data, clear next steps, follow-up dates, owner visibility, and simple workflow
-tools that help sales and account teams move faster."
