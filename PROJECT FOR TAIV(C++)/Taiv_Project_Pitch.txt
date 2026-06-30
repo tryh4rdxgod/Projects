@@ -1,0 +1,33 @@
+
+TAIV ACCOUNT TRACKER - PROJECT PITCH
+
+I built this small C++ desktop application as a practical demo for Taiv.
+
+The goal is not to replace a full CRM. The goal is to show how I think about account
+coordination and sales operations:
+
+- Clean account information
+- Clear account status
+- Follow-up dates
+- Priority tracking
+- Revenue opportunity visibility
+- Campaign notes
+- Owner visibility
+- Reduced missed follow-ups
+
+WHY THIS MATTERS FOR TAIV
+Taiv works with venues, advertisers, campaigns, follow-ups, and account performance.
+A simple tracking tool like this demonstrates the same operating logic:
+
+1. Keep every account organized.
+2. Know the next step.
+3. Know who owns the account.
+4. Keep campaign/client notes clear.
+5. Reduce missed follow-ups.
+6. Make sales/account work easier to manage.
+
+HOW I WOULD EXPLAIN IT
+"I made this project to show that I understand more than basic admin work.
+I understand that account teams need clean data, clear follow-ups, and simple systems
+that make client work easier. I used C++ to build a small Windows desktop tracker that
+stores account data, tracks priorities, and highlights follow-ups due today or earlier."

@@ -1,0 +1,25 @@
+TAIV ACCOUNT TRACKER STUDIO - PROJECT PITCH
+
+I built this polished account tracker as a practical product demo for Taiv.
+
+What it shows:
+- I understand account coordination
+- I understand CRM hygiene
+- I understand follow-up discipline
+- I understand that sales/account teams need clean next steps
+- I can think in systems, not just tasks
+- I can build something usable and presentable
+
+How I would explain it:
+
+"I built a small Taiv-inspired account tracker to show how I think about account
+coordination and sales operations. It tracks venues, contacts, status, priority,
+revenue opportunity, owner, campaign notes and follow-up dates. The dashboard highlights
+pipeline value, hot accounts and due follow-ups. It is not meant to replace Taiv's
+real CRM; it is a practical demo showing how I organize account data and reduce missed
+client actions."
+
+Best interview line:
+
+"Give me a process, a CRM and a busy sales/account team - I can help keep account data
+clean, follow-ups visible, notes organized and execution moving."

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taiv Account Tracker Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">T</div>
+        <div>
+          <div class="brand-name">Taiv Tracker</div>
+          <div class="brand-sub">Account Ops Studio</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">
+          <span>Overview</span>
+          <small>Pipeline & follow-ups</small>
+        </button>
+        <button class="nav-item" data-view="accounts">
+          <span>Accounts</span>
+          <small>Venue CRM table</small>
+        </button>
+        <button class="nav-item" data-view="playbook">
+          <span>Playbook</span>
+          <small>Taiv workflow demo</small>
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <div class="eyebrow">Project angle</div>
+        <p>
+          A clean mini CRM demo for venue accounts, campaign notes, owners,
+          priorities and follow-up discipline.
+        </p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Built by Andrii Pavlenko</div>
+          <h1>Account coordination dashboard</h1>
+          <p class="lead">
+            Track venues, next steps, campaign status, revenue opportunity and follow-ups in one polished workflow.
+          </p>
+        </div>
+
+        <div class="top-actions">
+          <button id="seedDemoBtn" class="btn ghost">Reset demo</button>
+          <button id="exportBtn" class="btn secondary">Export CSV</button>
+          <button id="newAccountBtn" class="btn primary">+ New account</button>
+        </div>
+      </header>
+
+      <section class="kpi-grid">
+        <article class="kpi-card">
+          <span class="kpi-label">Total accounts</span>
+          <strong id="kpiAccounts">0</strong>
+          <em>active records</em>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Pipeline value</span>
+          <strong id="kpiPipeline">$0</strong>
+          <em>open opportunity</em>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Due follow-ups</span>
+          <strong id="kpiDue">0</strong>
+          <em>today or overdue</em>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Hot accounts</span>
+          <strong id="kpiHot">0</strong>
+          <em>high / urgent priority</em>
+        </article>
+      </section>
+
+      <section id="dashboardView" class="view active">
+        <div class="dashboard-grid">
+          <article class="panel panel-large">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">Focus queue</div>
+                <h2>Today’s follow-ups</h2>
+              </div>
+              <button id="showDueBtn" class="btn tiny">View due</button>
+            </div>
+            <div id="followupQueue" class="queue"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">Sales ops</div>
+                <h2>Status mix</h2>
+              </div>
+            </div>
+            <div id="statusMix" class="status-mix"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">Demo value</div>
+                <h2>What this proves</h2>
+              </div>
+            </div>
+            <div class="proof-list">
+              <div><span></span> Clean account notes and next steps</div>
+              <div><span></span> Better follow-up consistency</div>
+              <div><span></span> CRM hygiene and pipeline visibility</div>
+              <div><span></span> Practical sales/account support thinking</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="accountsView" class="view">
+        <article class="panel">
+          <div class="filters">
+            <label>
+              Search
+              <input id="searchInput" type="search" placeholder="Search venue, contact, status, notes..." />
+            </label>
+
+            <label>
+              Status
+              <select id="statusFilter">
+                <option value="All">All</option>
+              </select>
+            </label>
+
+            <label>
+              Priority
+              <select id="priorityFilter">
+                <option value="All">All</option>
+              </select>
+            </label>
+
+            <label>
+              Owner
+              <input id="ownerFilter" type="text" placeholder="Any owner" />
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Account</th>
+                  <th>Contact</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Revenue</th>
+                  <th>Next follow-up</th>
+                  <th>Owner</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="accountRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="playbookView" class="view">
+        <div class="playbook">
+          <article class="panel">
+            <div class="eyebrow">Taiv-ready workflow</div>
+            <h2>How this supports account / sales operations</h2>
+            <p>
+              Taiv connects venues, advertisers and campaign execution. This tool shows the operating logic:
+              every account has a status, owner, next action, priority, revenue opportunity and clean notes.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <b>1</b>
+                <div>
+                  <h3>Capture account</h3>
+                  <p>Store venue, contact, revenue potential and campaign notes.</p>
+                </div>
+              </div>
+              <div class="step">
+                <b>2</b>
+                <div>
+                  <h3>Set next action</h3>
+                  <p>Use the date picker to keep follow-ups visible and on time.</p>
+                </div>
+              </div>
+              <div class="step">
+                <b>3</b>
+                <div>
+                  <h3>Track pipeline</h3>
+                  <p>Filter by status, priority and owner to reduce missed opportunities.</p>
+                </div>
+              </div>
+              <div class="step">
+                <b>4</b>
+                <div>
+                  <h3>Export or review</h3>
+                  <p>Export a clean CSV for reporting, handoffs or sales/account review.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel pitch-panel">
+            <div class="eyebrow">Interview line</div>
+            <h2>How to explain it</h2>
+            <p>
+              “I built this account tracker as a small practical demo for Taiv. It shows how I think about account
+              coordination: clean CRM data, follow-up discipline, owner visibility, campaign notes and simple dashboards
+              that help sales/account teams move faster.”
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="accountDialog" class="modal">
+    <form id="accountForm" method="dialog">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">Account record</div>
+          <h2 id="modalTitle">New account</h2>
+        </div>
+        <button type="button" class="icon-btn" id="closeModalBtn">×</button>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Account / Venue
+          <input name="accountName" required placeholder="Downtown Sports Bar" />
+        </label>
+        <label>
+          Venue Type
+          <input name="venueType" placeholder="Sports bar, restaurant, pub..." />
+        </label>
+        <label>
+          Contact Person
+          <input name="contactPerson" placeholder="Owner / Manager" />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" placeholder="contact@example.com" />
+        </label>
+        <label>
+          Phone
+          <input name="phone" placeholder="204-000-0000" />
+        </label>
+        <label>
+          Status
+          <select name="status"></select>
+        </label>
+        <label>
+          Priority
+          <select name="priority"></select>
+        </label>
+        <label>
+          Revenue Opportunity
+          <input name="revenueOpportunity" type="number" min="0" step="100" placeholder="12000" />
+        </label>
+        <label>
+          Last Follow-Up
+          <input name="lastFollowUp" type="date" />
+        </label>
+        <label>
+          Next Follow-Up
+          <input name="nextFollowUp" type="date" />
+        </label>
+        <label>
+          Owner
+          <input name="owner" placeholder="Andrii" />
+        </label>
+        <label class="full">
+          Campaign Notes
+          <textarea name="notes" rows="5" placeholder="Decision maker, screen count, campaign interest, next step..."></textarea>
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" id="deleteBtn" class="btn danger">Delete</button>
+        <div class="spacer"></div>
+        <button type="button" id="markTodayBtn" class="btn ghost">Mark contacted today</button>
+        <button type="button" id="cancelBtn" class="btn secondary">Cancel</button>
+        <button type="submit" class="btn primary">Save account</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast">Saved</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
