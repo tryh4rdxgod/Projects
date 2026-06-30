@@ -2,8 +2,7 @@ POLISHED DROPDOWN VERSION
 - Native white browser dropdowns replaced with custom dark dropdown menus.
 - Improved table spacing, hover states, chips, scrollbar styling and date picker visuals.
 
-TAIV ACCOUNT TRACKER STUDIO
-Polished HTML/CSS/JS app demo for Andrii Pavlenko
+o
 
 WHY THIS VERSION EXISTS
 The previous C++ Win32 version works, but native Win32 controls look old and harsh.
@@ -37,10 +36,7 @@ DATA STORAGE
 The app saves data in the browser's localStorage.
 That means data stays on the same browser/computer unless you reset demo data or clear browser storage.
 
-HOW TO PRESENT THIS TO TAIV
-Say this:
 
-"I made two versions. The C++ version proves I can build a Windows app, but this polished Studio version shows the product thinking better. It tracks venue accounts, campaign notes, revenue opportunity, priority, owner and follow-ups. The point is not to replace Taiv's CRM, but to show how I think about account coordination, sales operations, clean data and follow-up discipline."
 
 FEATURES
 - Create/edit/delete account
